@@ -21,5 +21,5 @@ document.getElementById('postForm').addEventListener('submit', function(event) {
     posts.push(post);
     localStorage.setItem('posts', JSON.stringify(posts));
 
-    window.location.href = 'index.html';
+    window.location.href = 'post.html';
 });
