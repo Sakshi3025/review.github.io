@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h2>${post.title}</h2>
                 <p>${post.content}</p>
                 <p class="author">- ${post.author}</p>
-                <button class="delete-btn" onclick="deletePost(${index})">Delete</button>
+                
             `;
 
             postsContainer.appendChild(postElement);
@@ -19,12 +19,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function deletePost(index) {
-    let posts = localStorage.getItem('posts');
-    if (posts) {
-        posts = JSON.parse(posts);
-        posts.splice(index, 1);
-        localStorage.setItem('posts', JSON.stringify(posts));
-        location.reload();
-    }
-}
